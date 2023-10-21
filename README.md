@@ -11,6 +11,11 @@
 
 JavaScript brings HTML to life, CSS makes HTML beautiful, and HTML gives JavaScript and CSS their structure on a web page.
 </p>
+
+<hr>
+The main three languages used in web page development are HTML, CSS, and JavaScript. In general:
+<p>HTML provides the structure, CSS provides the presentation and formatting, and JavaScript makes the elements dynamic and controls their behavior.</p>
+
 <h1> HTML </h1>
 <p>HTML makes up this web page’s skeleton and structure, and almost every other web page you’ll ever visit. It’s a markup language that “marks up” and forms the backbone to online content, putting the site structure in place for the web browser to understand.
 </p>
@@ -25,6 +30,4 @@ JavaScript brings HTML to life, CSS makes HTML beautiful, and HTML gives JavaScr
 <p>JavaScript (JS) is another key language for web page design and inserts dynamic text into HTML client-side.
 
 It’s a scripting language rather than a markup language.</p>
-<br>
-The main three languages used in web page development are HTML, CSS, and JavaScript. In general:
-<p>HTML provides the structure, CSS provides the presentation and formatting, and JavaScript makes the elements dynamic and controls their behavior.</p>
+
