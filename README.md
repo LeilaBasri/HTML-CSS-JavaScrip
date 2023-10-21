@@ -11,3 +11,13 @@
 
 JavaScript brings HTML to life, CSS makes HTML beautiful, and HTML gives JavaScript and CSS their structure on a web page.
 </p>
+<table width="100%">
+  <tr width="100%">
+    <th width="50%" align="center">css</th>
+    <th width="50%" align="center">java script</th>
+  </tr>
+    <tr width="100%">
+    <th width="50%" align="center">html</th>
+    <th width="50%" align="center">html</th>
+  </tr>
+</table>
