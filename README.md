@@ -1,4 +1,5 @@
-# HTML-CSS-JavaScrip  <img src="html-css-javascript-2.png" width="50px">
+# HTML-CSS-JavaScrip
+<img src="html-css-javascript-2.png" width="50px">
 <p>
   HTML is the fundamental markup language for webpages.
 </p>
