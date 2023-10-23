@@ -1,1 +1,66 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Dropdowns</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .dropDown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn{
+            background-color: black;
+            position: relative;
+            color: white;
+            cursor: pointer;
+            padding: 20px 50px;
+            font-size: 20px;
+        }
+        .dropbtn:hover , .dropbtn:focus{
+            background-color: #000b15 !important;
+        }
+        .dropDownContent{
+            background-color: black;
+            color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            display: none;
+        }
+        .dropDownContent a{
+            display: block;
+            color: white;
+            padding: 20px 50px;
+        }
+        .dropDownContent a:hover{
+            background-color: #000b15;      
+        }
+        /* Show the dropdown menu on hover */
+        .dropDown:hover .dropDownContent{display: block !important;}
+
+    </style>
+</head>
+<body>
+    <div class="dropDown">
+        <button class="dropbtn">
+           <img src="Images/menubar.png" width="20px"> Shop Aisles
+        </button>
+        <div id="myDropDown" class="dropDownContent">
+            <a href="#">Pantry</a>
+            <a href="#">Bakery</a>
+            <a href="#">Frozen</a>
+            <a href="#">Dairy & Eggs</a>
+            <a href="#">Deli</a>
+            <a href="#">International Foods</a>
+            <a href="#">Fruits & Vegetables</a>
+            <a href="#">Meat & Seafood</a>  
+        </div>
+    </div>
+</body>
+
+</html>
