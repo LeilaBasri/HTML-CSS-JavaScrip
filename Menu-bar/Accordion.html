@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accorion</title>
+    <style>
+        .accordionMenu{
+            width: 300px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            padding: 20px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            overflow-y: scroll;
+        }
+        .accordion{
+            padding: 20px 50px;
+            position: relative;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid white;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: left;
+        }
+        .active, .accordion:hover {
+            background-color: #1430e4;
+        }
+        .panel{
+            display: none;
+            overflow: hidden;
+        }
+        .subAccordion{
+            padding: 20px 20px 20px 80px;
+            position: relative;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid white;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: left;
+        }
+        .subAccordion:hover{
+            background-color: #010310;
+        }
+    </style>
+</head>
+<body>
+    <!--Accordions are useful when you want to toggle between hiding and showing large amount of content-->
+    <div class="accordionMenu">
+        <h1>Category</h1>
+        <button class="accordion">Women</button>
+        <div class="panel">
+            <button class="subAccordion">Women's Accessories</button>
+            <div class="panel"></div>
+            <button class="subAccordion">Women's Clothing</button>
+            <div class="subPanel"></div>
+            <button class="subAccordion">Promotions</button>
+            <div class="panel"></div>
+            <button class="subAccordion">Brand</button>
+            <div class="panel"></div>
+        </div>
+        <button class="accordion">Men</button>
+        <div class="panel">
+            <button class="subAccordion">Men's Accessories</button>
+            <div class="panel"></div>
+            <button class="subAccordion">Men's Clothing</button>
+            <div class="panel"></div>
+            <button class="subAccordion">Promotions</button>
+            <div class="panel"></div>
+            <button class="subAccordion">Brand</button>
+            <div class="panel"></div>
+        </div>
+        <button class="accordion">Kids & Baby</button>
+        <div class="panel"></div>
+        <button class="accordion">Shoes</button>
+        <div class="panel"></div>
+        <button class="accordion">Beauty</button>
+        <div class="panel"></div>
+    </div>
+    
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
 
+</body>
+</html>
