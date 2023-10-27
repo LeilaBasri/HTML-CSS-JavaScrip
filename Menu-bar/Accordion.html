@@ -6,7 +6,7 @@
     <title>Accorion</title>
     <style>
         .accordionMenu{
-            width: 300px;
+            width: 400px;
             background-color: black;
             color: white;
             position: fixed;
@@ -30,7 +30,18 @@
             text-align: left;
         }
         .active, .accordion:hover {
-            background-color: #1430e4;
+            background-color: #010522;
+        }
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
         }
         .panel{
             display: none;
@@ -49,7 +60,41 @@
             text-align: left;
         }
         .subAccordion:hover{
-            background-color: #010310;
+            background-color: #010522;
+        }
+        .active, .subAccordion:hover {
+            background-color: #010630;
+        }
+        .subAccordion::after{
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after {
+            content: "\2212";
+        }
+        .notAccordion::after{
+            content: "";
+        }
+        .subSubAccordion{
+            padding: 20px 0px 20px 130px;
+            position: relative;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid white;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            text-align: left;
+        }
+        .subSubAccordion:hover{
+            background-color: #010522;
+        }
+        .active, .subSubAccordion:hover {
+            background-color: #010630;
         }
     </style>
 </head>
@@ -60,32 +105,281 @@
         <button class="accordion">Women</button>
         <div class="panel">
             <button class="subAccordion">Women's Accessories</button>
-            <div class="panel"></div>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">JEWELLERY</button>
+                <button class="subSubAccordion notAccordion">WATCHES</button>
+                <button class="subSubAccordion notAccordion">Sunglasses & Reading Glasses</button>
+                <button class="subSubAccordion notAccordion">Gloves & Mittens</button>
+                <button class="subSubAccordion notAccordion">Hair Accessories</button>
+                <button class="subSubAccordion notAccordion">Hats</button>
+                <button class="subSubAccordion notAccordion">Belts</button>
+                <button class="subSubAccordion notAccordion">Face Masks</button>
+                <button class="subSubAccordion notAccordion">Scarves & Wraps</button>
+            </div>
             <button class="subAccordion">Women's Clothing</button>
-            <div class="subPanel"></div>
-            <button class="subAccordion">Promotions</button>
-            <div class="panel"></div>
-            <button class="subAccordion">Brand</button>
-            <div class="panel"></div>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Dresses</button>
+                <button class="subSubAccordion notAccordion">Coats, Jackets & Blazers</button>
+                <button class="subSubAccordion notAccordion">Tops</button>
+                <button class="subSubAccordion notAccordion">Skirts</button>
+                <button class="subSubAccordion notAccordion">Sweaters</button>
+                <button class="subSubAccordion notAccordion">Sweatpants & Leggings</button>
+                <button class="subSubAccordion notAccordion">Sweatshirts & Hoodies</button>
+                <button class="subSubAccordion notAccordion">Swimsuits & Cover-Ups</button>
+                <button class="subSubAccordion notAccordion">Jeans</button>
+                <button class="subSubAccordion notAccordion">Jumpsuits & Rompers</button>
+                <button class="subSubAccordion notAccordion">Pajamas & Robes</button>
+                <button class="subSubAccordion notAccordion">Pants & Trousers</button>
+                <button class="subSubAccordion notAccordion">Shorts</button>
+                <button class="subSubAccordion notAccordion">Bras, Lingerie & Panties</button>
+                <button class="subSubAccordion notAccordion">Socks & Tights</button>
+            </div>
+            <button class="subAccordion">Women's Shoes</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Flats</button>
+                <button class="subSubAccordion notAccordion">Boots</button>
+                <button class="subSubAccordion notAccordion">Heels & Pumps</button>
+                <button class="subSubAccordion notAccordion">Loafers & Oxfords</button>
+                <button class="subSubAccordion notAccordion">Sneakers & Sport Shoes</button>
+                <button class="subSubAccordion notAccordion">Sandals</button>
+                <button class="subSubAccordion notAccordion">Slippers</button>
+                <button class="subAccordion notAccordion">Shoe Accessories</button>
+            </div>
+            <button class="subAccordion">HANDBAGS</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Shoulder Bags</button>
+                <button class="subSubAccordion notAccordion">Clutches & Pouches</button>
+                <button class="subSubAccordion notAccordion">Wallets & Wristlets</button>
+                <button class="subSubAccordion notAccordion">Backpacks</button>
+                <button class="subSubAccordion notAccordion">Belt Bags & Fanny Packs</button>
+                <button class="subSubAccordion notAccordion">Crossbody Bags</button>
+                <button class="subSubAccordion notAccordion">Top Handles & Satchels</button>
+                <button class="subSubAccordion notAccordion">Totes</button>
+            </div>
+            <button class="subAccordion">Women's Jewellery</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Necklaces</button>
+                <button class="subSubAccordion notAccordion">Bracelets</button>
+                <button class="subSubAccordion notAccordion">Brooches</button>
+                <button class="subSubAccordion notAccordion">Earrings</button>
+                <button class="subSubAccordion notAccordion">Rings</button>
+                <button class="subSubAccordion notAccordion">Jewellery Boxes & Cleaners</button>
+            </div>
+            <button class="subAccordion">Women's Watches</button>
         </div>
+
         <button class="accordion">Men</button>
         <div class="panel">
+            <button class="subAccordion">Grooming & Cologne</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Beard Care & Shaving</button>
+                <button class="subSubAccordion notAccordion">Cologne</button>
+                <button class="subSubAccordion notAccordion">Deodorant</button>
+                <button class="subSubAccordion notAccordion">Hair Products</button>
+                <button class="subSubAccordion notAccordion">Skin Care</button>
+                <button class="subSubAccordion notAccordion">Shower Gels & Body Scrubs</button>
+                <button class="subAccordion notAccordion">Gift & Value Sets</button>
+            </div>
             <button class="subAccordion">Men's Accessories</button>
-            <div class="panel"></div>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Belts</button>
+                <button class="subSubAccordion notAccordion">Ties & Pocket Squares</button>
+                <button class="subSubAccordion notAccordion">Sunglasses & Reading Glasses</button>
+                <button class="subSubAccordion notAccordion">Hats</button>
+                <button class="subSubAccordion notAccordion">Gloves</button>
+                <button class="subSubAccordion notAccordion">Scarves</button>
+                <button class="subSubAccordion notAccordion">Collar Stays & Cufflinks</button>
+                <button class="subSubAccordion notAccordion">Face Masks</button>   
+            </div>
+            <button class="subAccordion notAccordion">Men's Bags & Wallets</button> 
             <button class="subAccordion">Men's Clothing</button>
-            <div class="panel"></div>
-            <button class="subAccordion">Promotions</button>
-            <div class="panel"></div>
-            <button class="subAccordion">Brand</button>
-            <div class="panel"></div>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Coats & Jackets</button>
+                <button class="subSubAccordion notAccordion">Suit Separates & Blazers</button>
+                <button class="subSubAccordion notAccordion">Jeans</button>
+                <button class="subSubAccordion notAccordion">Joggers & Sweatpants</button>
+                <button class="subSubAccordion notAccordion">Pajamas & Robes</button>
+                <button class="subSubAccordion notAccordion">Pants & Chinos</button>
+                <button class="subSubAccordion notAccordion">Shorts</button>
+                <button class="subSubAccordion notAccordion">Sweaters</button>
+                <button class="subSubAccordion notAccordion">Sweatshirts & Hoodies</button>
+                <button class="subSubAccordion notAccordion">Tops</button>
+                <button class="subSubAccordion notAccordion">Swimwear</button>
+                <button class="subSubAccordion notAccordion">Underwear & Socks</button>
+            </div>
+            <button class="subAccordion notAccordion">Men's Jewellery</button>
+            <button class="subAccordion">Men's Shoes</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Boots</button>
+                <button class="subSubAccordion notAccordion">Loafers & Slip-Ons</button>
+                <button class="subSubAccordion notAccordion">Oxfords & Derbys</button>
+                <button class="subSubAccordion notAccordion">Sneakers & Sport Shoes</button>
+                <button class="subSubAccordion notAccordion">Sandals</button>
+                <button class="subSubAccordion notAccordion">Slippers</button>
+                <button class="subSubAccordion notAccordion">Dress Shoes</button>
+            </div>
+            <button class="subAccordion notAccordion">Men's Watches</button>
         </div>
+
         <button class="accordion">Kids & Baby</button>
-        <div class="panel"></div>
+        <div class="panel">
+            <button class="subAccordion">Baby & Kids' Clothing</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Dresses & Skirts</button>
+                <button class="subSubAccordion notAccordion">Bodysuits & Footies</button>
+                <button class="subSubAccordion notAccordion">Clothing Sets</button>
+                <button class="subSubAccordion notAccordion">Coats, Jackets & Snowsuits</button>
+                <button class="subSubAccordion notAccordion">Jeans</button>
+                <button class="subSubAccordion notAccordion">Jumpsuits & Rompers</button>
+                <button class="subSubAccordion notAccordion">Pajamas & Robes</button>
+                <button class="subSubAccordion notAccordion">Pants</button>
+                <button class="subSubAccordion notAccordion">Shorts</button>
+                <button class="subSubAccordion notAccordion">Suits & Dresswear</button>
+                <button class="subSubAccordion notAccordion">Sweaters</button>
+                <button class="subSubAccordion notAccordion">Sweatpants & Leggings</button>
+                <button class="subSubAccordion notAccordion">Sweatshirts & Hoodies</button>
+                <button class="subSubAccordion notAccordion">Tops</button>
+                <button class="subSubAccordion notAccordion">Underwear & Socks</button>
+                <button class="subSubAccordion notAccordion">Swimwear</button>
+            </div>
+            <button class="subAccordion">Baby Gear</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Activity</button>
+                <button class="subSubAccordion notAccordion">Baby Carriers & Wraps</button>
+                <button class="subSubAccordion notAccordion">Blankets, Swaddles & Sleepsacks</button>
+                <button class="subSubAccordion notAccordion">Car Seats</button>
+                <button class="subSubAccordion notAccordion">Feeding & Teethers</button>
+                <button class="subSubAccordion notAccordion">Health & Safety</button>
+                <button class="subSubAccordion notAccordion">Nursery Furniture & Décor</button>
+                <button class="subSubAccordion notAccordion">Bathing</button>
+                <button class="subSubAccordion notAccordion">Potty & Diapering</button>
+                <button class="subSubAccordion notAccordion">Strollers</button>
+            </div>
+            <button class="subAccordion">Kids' Accessories</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Baby Accessories</button>
+                <button class="subSubAccordion notAccordion">Backpacks & Lunch Bags</button>
+                <button class="subSubAccordion notAccordion">Hair Accessories</button>
+                <button class="subSubAccordion notAccordion">Hats, Scarves & Gloves</button>
+                <button class="subSubAccordion notAccordion">Kids' Jewellery</button>
+                <button class="subSubAccordion notAccordion">Kids' Watches</button>
+                <button class="subSubAccordion notAccordion">Sunglasses</button>
+                <button class="subSubAccordion notAccordion">Ties</button>
+                <button class="subSubAccordion notAccordion">Belts</button>
+                <button class="subSubAccordion notAccordion">Umbrellas</button>
+                <button class="subSubAccordion notAccordion">Face Masks</button>
+            </div>
+            <button class="subAccordion">Kids' Shoes</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Baby Shoes & Booties</button>
+                <button class="subSubAccordion notAccordion">Boots</button>
+                <button class="subSubAccordion notAccordion">Sneakers & Sport Shoes</button>
+                <button class="subSubAccordion notAccordion">Sandals</button>
+                <button class="subSubAccordion notAccordion">Slippers</button>
+                <button class="subSubAccordion notAccordion">Dress Shoes</button>
+            </div>
+            <button class="subAccordion">Toys</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Action Figures & Playsets</button>
+                <button class="subSubAccordion notAccordion">Toddler & Preschool Toys</button>
+                <button class="subSubAccordion notAccordion">Toy Vehicles & Remote Control</button>
+                <button class="subSubAccordion notAccordion">Building Sets & Blocks</button>
+                <button class="subSubAccordion notAccordion">Interactive Toys</button>
+                <button class="subSubAccordion notAccordion">Musical Toys</button>
+                <button class="subSubAccordion notAccordion">Outdoor Toys</button>
+                <button class="subSubAccordion notAccordion">Baby Toys</button>
+                <button class="subSubAccordion notAccordion">Books & Learning Toys</button>
+                <button class="subSubAccordion notAccordion">Games & Puzzles</button>
+                <button class="subSubAccordion notAccordion">Science & Discovery</button>
+                <button class="subSubAccordion notAccordion">Arts & Crafts</button>
+                <button class="subSubAccordion notAccordion">Collectible Toys</button>
+                <button class="subSubAccordion notAccordion">Dolls & Dollhouses</button>
+                <button class="subSubAccordion notAccordion">Dress-Up & Pretend Play</button>
+                <button class="subSubAccordion notAccordion">Play Room</button>
+                <button class="subSubAccordion notAccordion">Plush Toys</button>
+                <button class="subSubAccordion notAccordion">Wagons</button>
+            </div>
+        </div>
         <button class="accordion">Shoes</button>
-        <div class="panel"></div>
+        <div class="panel">
+            <button class="subAccordion notAccordion">Kids' Shoes</button>
+            <button class="subAccordion notAccordion">Men's Shoes</button>
+            <button class="subAccordion notAccordion">Women's Shoes</button>
+            <button class="subAccordion notAccordion">Boots</button>
+            <button class="subAccordion notAccordion">Flats</button>
+            <button class="subAccordion notAccordion">Loafers & Oxfords</button>
+            <button class="subAccordion notAccordion">Heels & Pumps</button>
+            <button class="subAccordion notAccordion">Sandals</button>
+            <button class="subAccordion notAccordion">Sneakers & Sport Shoes</button>
+        </div>
         <button class="accordion">Beauty</button>
-        <div class="panel"></div>
+        <div class="panel">
+            <button class="subAccordion">Fragrance</button> 
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Body & Hair Mists</button>
+                <button class="subSubAccordion notAccordion">Candles & Home Scents</button>
+                <button class="subSubAccordion notAccordion">Men's Cologne</button>
+                <button class="subSubAccordion notAccordion">Rollerballs & Travel Sizes</button>
+                <button class="subSubAccordion notAccordion">Women's Perfume</button>
+            </div>
+            <button class="subAccordion">Bath & Body</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Bath & Body Tools</button>
+                <button class="subSubAccordion notAccordion">Bath & Shower</button>
+                <button class="subSubAccordion notAccordion">Body Moisturizer</button>
+                <button class="subSubAccordion notAccordion">Deodorant</button>
+                <button class="subSubAccordion notAccordion">Hand Care</button>
+                <button class="subSubAccordion notAccordion">Self-Tanners</button>
+                <button class="subSubAccordion notAccordion">Shaving & Hair Removal</button>
+                <button class="subSubAccordion notAccordion">Toothbrushes & Oral Care</button>
+            </div>
+            <button class="subAccordion">Makeup</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Eyes</button>
+                <button class="subSubAccordion notAccordion">Face</button>
+                <button class="subSubAccordion notAccordion">Lips</button>
+                <button class="subSubAccordion notAccordion">Makeup Brushes & Applicators</button>
+                <button class="subSubAccordion notAccordion">Makeup Bags & Storage</button>
+                <button class="subSubAccordion notAccordion">Nails</button>
+            </div>
+            <button class="subAccordion">Hair Care</button>
+            <div class="panel">
+                <button class="subSubAccordion notAccordion">Hair Styling & Treatments</button>
+                <button class="subSubAccordion notAccordion">Shampoo & Conditioner</button>
+                <button class="subSubAccordion notAccordion">Hair Tools</button>
+            </div>
+            <button class="subAccordion notAccordion">Gift With Purchase</button>
+        </div>
+        <button class="accordion">Promotions</button>
+        <div class="panel">
+            <button class="subAccordion notAccordion">TAKE AN EXTRA 10% OFF WHEN YOU SPEND $250 AT CHECKOUT WITH CODE EXTRA</button>
+            <button class="subAccordion notAccordion">Get $20 in HB Rewards points when you spend $100+</button>
+            <button class="subAccordion notAccordion">Discount Applied At Checko</button>
+        </div>
+        <button class="accordion">Brand</button>
+        <div class="panel">
+            <button class="subAccordion notAccordion">Calvin Klein</button>
+            <button class="subAccordion notAccordion">GUESS</button>
+            <button class="subAccordion notAccordion">Cotton On</button>
+            <button class="subAccordion notAccordion">Free People</button>
+            <button class="subAccordion notAccordion">Karen Scott</button>
+            <button class="subAccordion notAccordion">Lauren Ralph Lauren</button>
+            <button class="subAccordion notAccordion">Levi's</button>
+            <button class="subAccordion notAccordion">Mango</button>
+            <button class="subAccordion notAccordion">Nike</button>
+        </div>
     </div>
+     
+    <!--
+        <div class="panel">
+            <button class="subAccordion"></button>
+            <button class="subAccordion"></button>
+            <button class="subAccordion"></button>
+            <button class="subAccordion"></button>
+            <button class="subAccordion"></button>
+            <button class="subAccordion"></button>
+        </div>
+    -->
     
     <script>
         var acc = document.getElementsByClassName("accordion");
@@ -102,6 +396,25 @@
             }
           });
         }
+        </script>
+
+        <script>
+            var subAcc = document.getElementsByClassName("subAccordion");
+            var j;
+            
+            for (j = 0; j < subAcc.length; j++) {
+            subAcc[j].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if(panel.classList=="panel"){
+                    if (panel.style.display === "block") {
+                panel.style.display = "none";
+                } else {
+                panel.style.display = "block";
+                }
+                } 
+            });
+            }
         </script>
 
 </body>
