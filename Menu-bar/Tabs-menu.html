@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Menu</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .tabsContainer{
+        width: 100%;
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid #2b2a2a;
+        overflow: hidden;
+    }
+    .tabsButton{
+        padding: 20px 50px;
+        background-color: black;
+        color: white;
+        outline: none;
+        border: none;
+        float: left;
+        font-size: 18px;
+        cursor: pointer;
+        transition: .5s;
+        position: relative;
+    }
+    .tabsButton:hover{background-color: #010341;}
+    .tabsButton:active{background-color: #00011a;}
+    .tabContent{
+        width: 100%;
+        min-height: 400px;
+        position: absolute;
+        background-color: antiquewhite;
+        color: black;
+        padding: 50px;
+        border: 1px solid #2b2a2a;
+        border-top: none;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 50px;
+        }
+        .tabContent p{
+            padding-right: 50px;
+        }
+        .topRight{
+            float: right;
+            cursor: pointer;
+            font-size: 32px;
+            font-weight: bold;
+            transition: .5s;
+        }
+        .topRight:hover{
+            color: red;
+            font-size: 36px;
+        }
+</style>
+<body>
+ <div class="tabsContainer">
+    <button class="tabsButton" onclick="openTab(event,'tabA')">HTML</button>
+    <button class="tabsButton" onclick="openTab(event, 'tabB')">CSS</button>
+    <button class="tabsButton" onclick="openTab(event, 'tabC')">JAVA SCRIPT</button>
+ </div>
+ <div class="tabContent" id="tabA">
+    <span onclick="this.parentElement.style.display='none'" class="topRight">&times</span>
+    <h3>HTML</h3>
+    <p>HTML is the fundamental markup language for webpages.</p>
+    <p>HTML makes up this web page’s skeleton and structure,
+         and almost every other web page you’ll ever visit.
+          It’s a markup language that “marks up” and forms the backbone to online content,
+         putting the site structure in place for the web browser to understand.
+    </p>
+ </div>
+ <div class="tabContent" id="tabB">
+    <span onclick="this.parentElement.style.display='none'" class="topRight">&times</span>
+    <h3>CSS</h3>
+    <p>CSS is the language we use to style an HTML document.
+         CSS describes how HTML elements should be displayed.
+    </p>
+    <p>CSS, or Cascading Style Sheets, shape the HTML and affects how it’s displayed to the website visitor.
+         These forms of styling include font color, background color,
+          border-radius (rounded corners on boxes), the position of columns,
+           hue, opacity, and separation. New CSS features even allow for animations,
+         flexbox gaps, and much more responsive design.
+    </p>
+ </div>
+ <div class="tabContent" id="tabC">
+    <span onclick="this.parentElement.style.display='none'" class="topRight">&times</span>
+    <h3>JAVA SCRIPT</h3>
+    <p>JavaScript (JS) is another key language for web page design and inserts dynamic text into HTML client-side.
 
+        It’s a scripting language rather than a markup language.
+        JavaScript brings HTML to life, CSS makes HTML beautiful,
+         and HTML gives JavaScript and CSS their structure on a web page.
+    </p>
+ </div>  
+</body>
+<script>
+    function openTab(event , tabName){
+        var tabContent = document.getElementsByClassName("tabContent");
+        var tabsButton = document.getElementsByClassName("tabsButton")
+        var i;
+        for(i=0;i<tabContent.length;i++){
+            tabContent[i].style.display = "none";
+        }
+        for(i=0;i<tabsButton.length;i++)
+        {
+            tabsButton[i].classList = tabsButton[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display="block";
+        event.currentTarget.className += " active";
+    }
+</script>
+</html>
